@@ -11,4 +11,19 @@ btn.addEventListener("click", function() {
   else{
     alert("Ma chi sei?\nEffettua la registrazione!");
   }
-})
+});
+
+// ALT 
+var founded = false;
+for (var i = 0; i < notaDB.length; i++) {
+  if (mail == notaDB[i]) {
+    founded = true;
+  }
+}
+
+if (founded == true) {
+    console.log("SI!");
+}
+else if (founded == false) {
+  console.log("No!");
+}

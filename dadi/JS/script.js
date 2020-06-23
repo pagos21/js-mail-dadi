@@ -9,19 +9,27 @@ btn.addEventListener("click" ,function() {
   var cpuWins = 0;
 
 // Lacio Contemporanemte i dadi 5 volte!
-  for (var i = 0; i < 5; i++) {
+  for (var i = 1; i < 6; i++) {
     dadoHuman = Math.floor(Math.random()* 6 + 1);
     dadoCPU = Math.floor(Math.random()* 6 + 1);
 
     if(dadoHuman > dadoCPU) {
-      console.log("Vince dado umano");
+      console.log("Batteria n. " + i + " Vince dado umano");
+      // var node = document.createElement("LI");
+      // var textnode = document.createTextNode(" Vince dado umano");
+      // node.appendChild(textnode);
+      // document.getElementById("myList").appendChild(node);
       humanWins += 1;
     }  else if (dadoHuman < dadoCPU) {
-      console.log("Vince dado CPU");
+      console.log("Batteria n. " + i + " Vince dado CPU");
+      // var node = document.createElement("LI");
+      // var textnode = document.createTextNode("Vince dado CPU");
+      // node.appendChild(textnode);
+      // document.getElementById("myList").appendChild(node);
       cpuWins += 1;
     }
     else{
-      console.log("Pareggio!");
+      console.log("Batteria n. " + i + " Pareggio!");
     }
   }
 
@@ -38,12 +46,13 @@ btn.addEventListener("click" ,function() {
   else{
     alert("Un bel pareggio!");
   }
+  console.clear();
 
 // In caso di vittoria conclusiva!
-  if (humanTot >= 5) {
+  if (humanTot == 5) {
     alert ("L'Umano vince!");
     location.reload();
-  } else if (cpuTot >= 5) {
+  } else if (cpuTot == 5) {
     alert ("Vince la CPU!");
     location.reload();
   }
