@@ -15,10 +15,8 @@ btn.addEventListener("click" ,function() {
 
     if(dadoHuman > dadoCPU) {
       console.log("Batteria n. " + i + " Vince dado umano");
-      // var node = document.createElement("LI");
-      // var textnode = document.createTextNode(" Vince dado umano");
-      // node.appendChild(textnode);
-      // document.getElementById("myList").appendChild(node);
+      // document.getElementById("lista").innerHTML += "<li>" + lista[i] + "</li>";
+
       humanWins += 1;
     }  else if (dadoHuman < dadoCPU) {
       console.log("Batteria n. " + i + " Vince dado CPU");
